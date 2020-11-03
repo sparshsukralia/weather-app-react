@@ -19,6 +19,7 @@ function App() {
         .then((response) => {
           setWeather(response);
           setSearch("");
+          console.log(response);
         });
     }
   };
@@ -35,6 +36,16 @@ function App() {
           value={search}
           onKeyPress={searchPlace}
         />
+        {typeof weather.main != "undefined" ? (
+          <div className="app__weatherInfo">
+            <div className="weatherInfo__city">
+              {weather.name}, {weather.sys.country}
+            </div>
+            <div className="weatherInfo__date">{new Date().toDateString()}</div>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
