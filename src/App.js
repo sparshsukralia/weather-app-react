@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
@@ -10,6 +10,15 @@ function App() {
     key: "b132682bc64db89c5abca0d7edd8193f",
     url: "https://api.openweathermap.org/data/2.5/",
   };
+
+  useEffect(() => {
+    fetch(`${api.url}weather?q=London&units=metric&APPID=${api.key}`)
+      .then((response) => response.json())
+      .then((response) => {
+        setWeather(response);
+        console.log(response);
+      });
+  }, []);
 
   // function runs when we hit enter in the search field
   const searchPlace = (event) => {

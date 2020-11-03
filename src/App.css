@@ -42,14 +42,14 @@
   padding: 1rem 1.2rem;
   margin-bottom: 0;
   border-radius: 0.5rem;
-  background-color: rgba(241, 233, 233, 0.6);
+  background-color: rgba(226, 212, 212, 0.6);
   font-size: 1.2rem;
   font-weight: 300;
   transition: 0.2s ease-out;
 }
 
 .app__container input:focus {
-  background-color: rgba(238, 229, 229, 0.8);
+  background-color: rgba(207, 192, 192, 0.6);
 }
 
 .weatherInfo__city {
@@ -69,4 +69,8 @@
 
 .weatherInfo__date {
   font-size: 30px;
+  letter-spacing: 3px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
 }
