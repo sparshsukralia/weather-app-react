@@ -2,3 +2,45 @@
   margin: 0;
   padding: 0;
 }
+
+.app {
+  background-color: #70b8e9;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__container {
+  width: 500px;
+  min-height: 500px;
+  /* background-color: #b4e1ff; */
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 16px 32px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app__container h2 {
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.app__container input {
+  margin-top: 20px;
+  border: none;
+  border-bottom: 2px solid lightgray;
+  outline: none;
+  width: 300px;
+  font-size: 16px;
+  padding: 7px 10px;
+  font-weight: 300;
+  /* border-radius: 8px; */
+  background-color: rgb(255, 255, 255);
+  transition: 0.2s ease-out;
+}
+
+.app__container input:focus {
+  border-bottom: 2px solid black;
+}
