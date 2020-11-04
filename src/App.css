@@ -74,3 +74,38 @@
   justify-content: center;
   font-weight: bold;
 }
+
+.weatherInfo__description {
+  display: flex;
+  /* width: 20%; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weatherInfo__icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weatherInfo__weather {
+  color: #000000;
+  font-size: 2rem;
+  padding: 0 20px;
+  margin-left: 0;
+}
+
+.weatherInfo__temp {
+  color: #000000;
+  font-size: 7rem;
+  margin: 1rem 0;
+  font-weight: 200;
+  margin-left: 50px;
+  margin-bottom: 0;
+  padding: 0 20px;
+}
+
+.weatherInfo__tempSpan {
+  font-size: 5rem;
+}

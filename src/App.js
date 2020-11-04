@@ -9,6 +9,7 @@ function App() {
   const api = {
     key: "b132682bc64db89c5abca0d7edd8193f",
     url: "https://api.openweathermap.org/data/2.5/",
+    forecast: "https://api.openweathermap.org/data/2.5/forecast/",
   };
 
   useEffect(() => {
@@ -28,7 +29,7 @@ function App() {
         .then((response) => {
           setWeather(response);
           setSearch("");
-          console.log(response);
+          // console.log(response);
         });
     }
   };
@@ -51,6 +52,24 @@ function App() {
               {weather.name}, {weather.sys.country}
             </div>
             <div className="weatherInfo__date">{new Date().toDateString()}</div>
+
+            <div className="weatherInfo__description">
+              <div className="weatherInfo__icon">
+                <div className="icon">
+                  <img
+                    src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+                    alt=""
+                  />
+                </div>
+                <div className="weatherInfo__weather">
+                  {weather.weather[0].main}
+                </div>
+              </div>
+              <div className="weatherInfo__temp">
+                {Math.round(weather.main.temp)}
+                <span className="weatherInfo__tempSpan">°c</span>
+              </div>
+            </div>
           </div>
         ) : (
           ""
